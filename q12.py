@@ -10,3 +10,9 @@
 ## f,110
 ## g,35
 ##
+import csv
+with open('data.csv', 'rt') as f:
+    csv_reader = csv.reader(f, delimiter='\t')
+    tabla = list()
+    for fila in csv_reader:
+        tabla.append(fila)
