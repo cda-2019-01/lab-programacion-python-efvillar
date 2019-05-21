@@ -28,7 +28,12 @@ for linea in tabla1:
         suma = suma +int(codigo[-1])
         print (suma)
 """
-for linea in tabla1:
-    salida = [(linea[0],codigo[-1]) for codigo in linea[1] for linea in tabla1]
-
-print (salida)
+for i in range(len(tabla1)):
+    #print (tabla1[i][1])
+    a=0
+    for j in range(len(tabla1[i][1])):
+        #print (tabla1[i][1][j][-1])
+        
+        a += int(tabla1[i][1][j][-1])
+    print ("{},{}".format(tabla1[i][0],a))
+        
